@@ -47,12 +47,14 @@ Ten en cuenta que la API no tiene endpoints específicos para los métodos POST/
 -   [POST] http://localhost:3000/api/film/ Se envía por POST los datos de la película a crear y retorna un status 200. Payload {message: "Se ha guardado Titanic"}
 
     #### Ten en cuenta que el objeto de film debe tener una estructura igual que la estructura que se recibe de la API 
-    {title: Matrix, author: "Wachowski Brothers", etc...}
+    {Title: Matrix, Author: "Wachowski Brothers", etc...}
 
 
 -   [PUT] http://localhost:3000/api/film/ Actualiza los datos de una película y retorna un status 200. Payload {id:"0", message: "Se ha actualizado Titanic"}
 
--   [DELETE] http://localhost:3000/api/film/ Borra una película y retorna un status 200. Payload {id: 123, message: "Se ha borrado la película con ID: 123"}
+-   [DELETE] http://localhost:3000/api/film/ Borra una película y retorna un status 200.
+Deberás pasar por el body el id de la película que quieras borrar.
+Payload {id: 123, message: "Se ha borrado la película con ID: 123"}
 
 #### En caso de ruta no encontrada o error, devolver un mensaje de error. Especificar en el status si ha sido un 404, 500, etc... ({ message: 'Film not found' })
 

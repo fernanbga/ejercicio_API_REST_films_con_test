@@ -7,8 +7,8 @@ describe('fetchFilm utility', () => {
     if (!data) {
       console.error("Expected movie details for 'Inception', but got nothing.");
     }
-    expect(data.title).toBe('Inception');
-    if (data.title !== 'Inception') {
+    expect(data.Title).toBe('Inception');
+    if (data.Title !== 'Inception') {
       console.error("Expected movie title to be 'Inception', but got a different title.");
     }
   });

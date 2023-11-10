@@ -7,7 +7,7 @@ describe('Films API routes', () => {
     const title = 'Inception';
     const response = await request(app).get(`/api/film/${title}`);
     expect(response.statusCode).toBe(200, `Expected status code 200 when fetching movie '${title}', but got ${response.statusCode}.`);
-    expect(response.body.title).toBe(title, `Expected movie title to be '${title}', but got '${response.body.title}'.`);
+    expect(response.body.Title).toBe(title, `Expected movie title to be '${title}', but got '${response.body.Title}'.`);
   });
 
   it('should return 404 for a non-existent movie', async () => {
@@ -19,27 +19,27 @@ describe('Films API routes', () => {
 
   it('should add a new movie', async () => {
     const movie = {
-      title: 'Test Movie',
-      author: 'Test Author',
-      description: 'Test Description',
-      src: 'test.png'
+      Title: 'Test Movie',
+      Author: 'Test Author',
+      Description: 'Test Description',
+      Src: 'test.png'
     };
     const response = await request(app).post('/api/film/').send(movie);
     expect(response.statusCode).toBe(200, `Expected status code 200 when adding a new movie, but got ${response.statusCode}.`);
-    expect(response.body.message).toBe(`Se ha guardado ${movie.title}`, `Expected confirmation message for adding movie '${movie.title}', but got a different message.`);
+    expect(response.body.message).toBe(`Se ha guardado ${movie.Title}`, `Expected confirmation message for adding movie '${movie.Title}', but got a different message.`);
   });
 
   it('should update an existing movie', async () => {
     const updatedMovie = {
       id: 123,
-      title: 'Updated Test Movie',
-      author: 'Updated Test Author',
-      description: 'Updated Test Description',
-      src: 'updated_test.png'
+      Title: 'Updated Test Movie',
+      Author: 'Updated Test Author',
+      Description: 'Updated Test Description',
+      Src: 'updated_test.png'
     };
     const response = await request(app).put('/api/film/').send(updatedMovie);
     expect(response.statusCode).toBe(200, `Expected status code 200 when updating a movie, but got ${response.statusCode}.`);
-    expect(response.body.message).toBe(`Se ha actualizado ${updatedMovie.title}`, `Expected confirmation message for updating movie '${updatedMovie.title}', but got a different message.`);
+    expect(response.body.message).toBe(`Se ha actualizado ${updatedMovie.Title}`, `Expected confirmation message for updating movie '${updatedMovie.Title}', but got a different message.`);
   });
 
   it('should delete an existing movie', async () => {
