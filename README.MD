@@ -12,14 +12,14 @@ https://www.omdbapi.com/
 
 Para mantener todo organizado, vamos a utilizar una estructura de carpetas específica:
 
--   `app.js`: Este es tu archivo principal. Estará en la raíz de tu proyecto.
+-   `app.js`
 -   `utils/`
-    -   `fetchFilms.js`: Aquí vas a implementar la lógica para obtener información de películas desde una fuente externa.
+    -   `fetchFilms.js`
 -   `routes/`
-    -   `filmsRoutes.js`: En esta carpeta, manejarás las rutas relacionadas con las películas.
+    -   `films.js`
 -   `.env`: Este archivo, en la raíz del proyecto, te permitirá manejar variables de entorno.
 -   `package.json`: Aquí se encuentran las dependencias y scripts de tu proyecto.
--   `*.test.js`: Estos son los archivos de prueba. Te ayudarán a verificar que tu código hace lo que debe.
+-   `*.test.js`: Archivos de prueba. Te ayudarán a verificar que tu código hace lo que debe.
 
 ### Primeros Pasos
 
@@ -27,7 +27,7 @@ Para mantener todo organizado, vamos a utilizar una estructura de carpetas espec
 2.  Ejecuta `npm install` para instalar todas las dependencias necesarias para el proyecto.
 3.  Crea y configura tu archivo `.env` en la carpeta raíz con las variables necesarias para que la aplicación funcione correctamente.
 (API_KEY=tuapikey)
-4.  Crea un archivo .gitignore en la carpeta raíz para ignorar los ficheros .env y .gitignore al subir a GitHub.
+4.  Crea un archivo .gitignore en la carpeta raíz para ignorar los ficheros .env y node_modules al subir a GitHub.
 
 ### Tu Tarea
 
